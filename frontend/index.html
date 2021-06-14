@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container-fluid">
+    <h1>OTP Verification App<hr></h1>
+        <div class="main"> 
+            <form class="signup">
+                <div>
+                    
+                </div>
+                    <input type="email" placeholder="Enter Email ID" id="email">
+                
+                    <div>
+                        <button type="submit">Generate OTP</button>
+                    </div>  
+            </form>
+            <div id="show" style="color:red;"><span>
+
+            </span>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+
+    // Selectors
+    document.querySelector('.signup').addEventListener('submit', handleSubmitForm);
+
+    // Event Handlers
+    function handleSubmitForm(e) {
+        e.preventDefault();
+        let email = document.querySelector('input').value;
+        console.log(document.querySelector('input').value);
+
+        
+        // Post request to Validate Email and Generate OTP
+        fetch('http://localhost:8000/api/signup',{
+        method:'POST',
+        headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+         },
+        body:JSON.stringify({"email":email})    
+        })
+        .then(function(response){
+            return data = response.json()
+        })
+        .then(function(data){
+            if(data.status){
+                let OTP = data.data.OTP
+                alert('Your OTP is : '+ OTP)
+                window.location.href = "index2.html";
+            }
+            else{
+                let message=data.message
+                document.querySelector('#show').innerHTML=message
+            }
+           
+        })
+        .catch(err => 
+            console.log(err)
+        );
+        
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.container-fluid{
+    padding-top:50px;
+    max-width:500px;
+    margin:auto;
+    border:5px;
+}
+hr{
+    border:  solid black
+}
+h1{
+    text-align:center;
+    padding-bottom:30px;
+    padding-left:10px;
+    padding-right:10px;
+}
+div{
+    padding-top:10px;
+    text-align:center;
+    border-spacing:15px;
+    padding-bottom:5px;
+}
+input{
+    display:block-center;
+    margin-bottom:10px;
+    padding-top:10px;
+    text-align:center;
+    padding-bottom:10px;
+    border: 1.5px solid black;
+    width:49%;
+}
+button{
+    background-color:skyblue;
+    padding-top:10px;
+    text-align:center;
+    padding-bottom:10px;
+    width:50%;
+}
+

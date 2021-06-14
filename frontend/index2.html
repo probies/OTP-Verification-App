@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container-fluid">
+    <h1>OTP Verification App<hr></h1>
+    <div class="main"> 
+        <form class="otpvalidation">
+            
+                
+                <input type="email" placeholder="Email" id="email">
+            
+            
+                
+                <input type="otp" placeholder="OTP" id="otp">
+            
+            <div>
+                <button type="submit">Validate OTP </button>
+            </div>
+        </form>
+        <div id="show" style="color:red">
+
+        </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" >
+
+    // Selectors
+    document.querySelector('.otpvalidation').addEventListener('submit', handleSubmitForm);
+    
+    // Event Handlers
+    function handleSubmitForm(e) {
+        e.preventDefault();
+        let email = document.querySelector('input').value;
+        let otp = document.querySelector('input:nth-child(2)').value;
+        console.log(document.querySelector('input').value,document.querySelector('input:nth-child(2)').value);
+
+        // POST request to check OTP 
+        fetch('http://localhost:8000/api/signin',{
+            method:'POST',
+            headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            },
+            body:JSON.stringify({"email":email,"otp":otp})    
+        })
+        .then(function(response){
+            return data = response.json()
+        }).then(function(data){
+            if(data.status){
+                window.location.href = "index3.html";
+            }
+            else{
+                let message=data.message
+                document.querySelector('#show').innerHTML=message
+            }
+        })
+        .catch(err => 
+            console.log(err)
+        );
+
+
+    }
+    </script>
+</body>
+</html>
