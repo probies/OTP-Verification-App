@@ -22,11 +22,6 @@ In the project directory, you can run:
 ### `npm run server`
 With this command backend and API web service will start at localhost:8000/api/
 
-"tags": [
-  {"id": "125", "name": "Environment"},
-  {"id": "834", "name": "Water Quality"}
-],
-
 ### API Documenation ###
 
 ### POST request to Generate OTP for new user and old user at :
