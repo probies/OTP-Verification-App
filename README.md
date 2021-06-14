@@ -69,7 +69,7 @@ POST at localhost:8000/api/signin
 with data
 
 {
-    "email":"user emailID"
+    "email":"user emailID",
     "otp":"OTP data"
 }
 
@@ -126,7 +126,9 @@ GET at localhost:8000/api/signin
 
 {
     "status": false,
+    
     "data": {},
+    
     "error": "Oops. it seems like you do not have access to this route"
 }
 
