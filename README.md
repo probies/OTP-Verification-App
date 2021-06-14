@@ -126,9 +126,7 @@ GET at localhost:8000/api/signin
 
 {
     "status": false,
-    
     "data": {},
-    
     "error": "Oops. it seems like you do not have access to this route"
 }
 
