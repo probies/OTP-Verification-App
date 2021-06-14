@@ -92,7 +92,7 @@ with data
 }
 ```
 
-### 6. API response if OTP is field is not entered or less than 6 digit  :
+### 6. API response if OTP field is not entered or less than 6 digit  :
 ```
 {
     "status": false,
