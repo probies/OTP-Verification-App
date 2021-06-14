@@ -30,9 +30,11 @@ POST at localhost:8000/api/signup
 
 with data
 
+</
 {
     "email":"user emailID"
 }
+/>
 
 ### 1. API response if data is valid for registered user:
 
