@@ -1,13 +1,12 @@
 # Getting Started with OTP Verification App
 
 This App is built using
-
-# Node.js
-# Express.js
-# MongoDB
-# HTML
-# CSS
-# Javascript
+### Node.js
+### Express.js
+### MongoDB
+### HTML
+### CSS
+### Javascript
 
 ## Available Scripts
 
