@@ -88,13 +88,13 @@ Fill out the form:
 
 To create an API key in a project, the user must be granted the Editor basic role (roles/editor) on the project. See basic roles for more information.
 
-To create an API key:
+    To create an API key:
 
-1. Navigate to the APIs & Services→Credentials panel in Cloud Console.
+    1. Navigate to the APIs & Services→Credentials panel in Cloud Console.
 
-2. Select Create credentials, then select API key from the dropdown menu.
+    2. Select Create credentials, then select API key from the dropdown menu.
 
-3. The API key created dialog box displays your newly created key. An API key is a long string containing upper and lower case letters, numbers, and dashes. For example, a4db08b7-5729-4ba9-8c08-f2df493465a1.
+    3. The API key created dialog box displays your newly created key. An API key is a long string containing upper and lower case letters, numbers, and dashes. For example, a4db08b7-5729-4ba9-8c08-f2df493465a1.
 
 You might want to copy your key and keep it secure. Unless you are using a testing key that you intend to delete later, add application and API key restrictions.
 
